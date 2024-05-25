@@ -2,32 +2,70 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer components{
+  .fluid-container{
+    @apply max-w-[1200px] mx-auto px-5
   }
-}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .card-bg{
+    @apply p-6 bg-[#141414] border border-borderDark rounded-[32px] relative isolate overflow-hidden
   }
+  .innerCard{
+    @apply absolute bg-distortion top-0 bottom-0 right-0 left-0 -z-10 opacity-[0.06]
+  }
+
+  .imgCard{
+    @apply flex items-end
+  }
+
+  .linkBg{
+    @apply h-52 w-full opacity-0 absolute left-0 bottom-0 -z-10 transition duration-300 hover:opacity-70  
+  }
+
+}
+
+.imgCard{
+  isolation: isolate;
+}
+
+.linkBg + img{
+  transform: scale(1.070);
+  transition: 0.5s ease;
+}
+
+.linkBg:hover + img{
+  transform: scale(1);
+}
+
+.linkBg{
+  background: rgb(255,255,255);
+background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+}
+
+.bg-distortion{
+  background-size: 64px;
+}
+
+.cardLinks{
+ transform: translateY(25px);
+ opacity: 0;
+ transition: 0.5s ease;
+ position: relative;
+ z-index: 20;
+
+}
+
+.cardLinks svg{
+  transform: rotate(270deg);
+  transition: 0.5s ease;
+}
+
+.imgCard:hover .cardLinks{
+   transform: translateY(0px);
+   opacity: 1;
+}
+
+.imgCard:hover .cardLinks svg{
+  transform: rotate(360deg);
 }

@@ -6,13 +6,18 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    colors:{
+      dark: "rgb(9, 9, 9)",
+      light: "rgb(255, 255, 255)",
+      borderLight: "rgb(216, 219, 222)",
+      borderDark: "rgb(36, 36, 36)",
+    },
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
+                distortion: "url(/distortion.png)",
+              },
     },
   },
   plugins: [],
 };
+
