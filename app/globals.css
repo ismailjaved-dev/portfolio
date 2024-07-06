@@ -74,7 +74,6 @@ background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
 .bg-distortion{
   background-size: 64px;
 }
-
 .do_best .swiper-pagination {
   bottom: 0px !important;
   width: fit-content !important;
@@ -88,4 +87,34 @@ background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
 }
 .do_best .swiper-pagination span.swiper-pagination-bullet {
   background: #fff;
+}
+.eternal .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+
+input{
+  /* appearance: none;
+    width: 100%;
+    height: auto;
+    outline: none;
+    border: none;
+    padding: 20px 16px 20px 24px;
+    border-radius: 16px;
+    font-size: 16px;
+    font-family: "DM Sans", "DM Sans Placeholder", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -0.2px;
+    line-height: 1em;
+    text-align: left;
+  color: #cccccc !important; */
+
+ box-shadow: inset 0 0 0 0px rgb(102, 102, 102), rgb(138, 148, 158), inset 0 0 0 2px rgb(51, 51, 51), rgb(217, 219, 222) !important;
+ background-color: rgba(20, 20, 20, 0);
+ color:  rgb(102, 102, 102) !important;
+}
+
+input::placeholder{
+  color:  rgb(102, 102, 102) !important;
 }

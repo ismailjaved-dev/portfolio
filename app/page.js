@@ -1,6 +1,10 @@
 "use client";
 import Image from "next/image";
 import { IoIosArrowRoundForward } from "react-icons/io";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination, Autoplay } from "swiper/modules";
 
 export default function Home() {
   return (
@@ -106,6 +110,130 @@ export default function Home() {
               </div>
 
              </div>
+
+
+         
+ 
+ 
+              <div className="col-span-4 flex gap-4">
+               <div className="card-bg !p-8 col-span-2 basis-[55%] flex justify-center items-center">
+                 <div className="innerCard"></div>
+                 <span className="h-fit w-[98%] grid gap-4 mt-4">
+                 <h4 className="text-[26px] text-[#cccccc] tracking-[-0.025rem] leading-relaxed font-semibold">
+                 Get design tips & guides straight to your inbox for free!
+                 </h4>
+                 <div className="w-full flex gap-4">
+                 <input className="!bg-dark/0 !rounded-2xl card-bg !h-16 !border-2 grow" placeholder="Your email here"/>
+                  <button className="outline-none rounded-2xl bg-[#242424] text-[#ccc] h-16 px-6">
+                     Subscribe
+                  </button>
+                 </div>
+                 </span>
+               </div>
+ 
+ 
+              <div className="card-bg imgCard h-full basis-[28%]">
+              <div className="innerCard"></div>
+              <div className="flex flex-col h-full w-full justify-center gap-[25px]">
+              <h4 className="text-[26px] text-[#cccccc] tracking-[-0.025rem] leading-relaxed font-semibold">
+                Stack I use
+                 </h4>
+              <Swiper
+                    loop={true}
+                    autoplay={{ delay: 1 }}
+                    // spaceBetween={16}
+                    speed={1000}
+                    modules={[Autoplay]}
+                    slidesPerView={4}
+                    className="eternal w-full"
+                  >
+                    <SwiperSlide>
+                      <div className="bg-[#242424] p-4 w-fit rounded-2xl min-w-[72px] h-[72px]">
+                        <Image
+                          src="/notion.webp"
+                          fill
+                          className="!relative object-contain"
+                        />
+                      </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <div className="bg-[#242424] p-4 w-fit rounded-2xl min-w-[72px] h-[72px]">
+                        <Image
+                          src="/orange.webp"
+                          fill
+                          className="!relative object-contain"
+                        />
+                      </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <div className="bg-[#242424] p-4 w-fit rounded-2xl min-w-[72px] h-[72px]">
+                        <Image
+                          src="/paint-type.webp"
+                          fill
+                          className="!relative object-contain"
+                        />
+                      </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <div className="bg-[#242424] p-4 w-fit rounded-2xl min-w-[72px] h-[72px]">
+                        <Image
+                          src="/rainbow.webp"
+                          fill
+                          className="!relative object-contain"
+                        />
+                      </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <div className="bg-[#242424] p-4 w-fit rounded-2xl min-w-[72px] h-[72px]">
+                        <Image
+                          src="/framer.webp"
+                          fill
+                          className="!relative object-contain"
+                        />
+                      </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <div className="bg-[#242424] p-4 w-fit rounded-2xl min-w-[72px] h-[72px]">
+                        <Image
+                          src="/framer-motion.webp"
+                          fill
+                          className="!relative object-contain"
+                        />
+                      </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <div className="bg-[#242424] p-4 w-fit rounded-2xl max-w-[72px] h-[72px]">
+                        <Image
+                          src="/astra.webp"
+                          fill
+                          className="!relative object-contain"
+                        />
+                      </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <div className="bg-[#242424] p-4 w-fit rounded-2xl max-w-[72px] h-[72px]">
+                        <Image
+                          src="/ai.webp"
+                          fill
+                          className="!relative object-contain"
+                        />
+                      </div>
+                    </SwiperSlide>
+                  </Swiper>
+              </div>
+               </div>
+ 
+              <div className="card-bg imgCard basis-[22%]">
+                 
+                 <Image
+                   src="/person.webp"
+                   fill
+                   alt=""
+                   className="-z-20"
+                 />
+               </div>
+              </div>
+
 
             </div>
             <div className="col-span-1 text-[#fff]">asd</div>
